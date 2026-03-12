@@ -5,3 +5,4 @@ Run the Python script or use the provided executable. Use a text editor like Not
 ## autostart.json
 {  
   "startup": [  
+  {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},  
