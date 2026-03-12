@@ -1,3 +1,14 @@
 # AutoStart - 
 ### A Python script that sequentially starts and stops PC programs using simple .json instructions
-Run the Python script or use the provided executable. Use a text editor like Notepad to edit the autostart.json file to specify which programs to start, the sequence to start them in and the delay in seconds between each app.
+Run the Python script or use the provided executable. Use a text editor like Notepad to edit the autostart.json file to specify which programs to start and, the sequence and the delay in seconds between each app.
+
+{
+  "startup": [
+    {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},
+    {"path": "C:\\Users\\dfdol\\AppData\\Local\\WSJT-X\\WSJTX-CoPilot.exe", "delay": 2}
+  ],
+  "shutdown": [
+    {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},
+    {"path": "C:\\Users\\dfdol\\AppData\\Local\\WSJT-X\\WSJTX-CoPilot.exe", "delay": 2}
+  ]
+}
