@@ -1,12 +1,11 @@
 # AutoStart - 
-### A Python script that sequentially starts and stops PC programs using simple .json instructions
+### A Python script that sequentially 'startup' and 'shutdown' PC programs using instructions from a simple .json text file
 Run the Python script or use the provided executable. Use a text editor like Notepad to edit the autostart.json file to specify which programs to start and shutdown, the sequence and the delay in seconds between each app.
 
-
 ## autostart.json
-There are two sections. The first is the "startup" paths and the delay before going to the next startup item. The second section is which programs to "shutdown", the sequence and the dealy in seconds between each app.
+There are two sections. The first are the paths to the programs to 'startup' and the delay before going to the next startup item. The second section are the paths to the programs to 'shutdown', the sequence and the dealy in seconds between each app.
 
-Just follow normal .json formatting in your file.
+Just follow normal .json formatting in your file. Remember to use '\\' instead of '\' in the executable file path.
 
 ```
 {  
