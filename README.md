@@ -7,7 +7,7 @@ Place all of the files in the same directory.
 ## autostart.json
 There are two sections. The "startup" contains the paths to the programs to start and the delay before starting in seconds. The "shutdown" section contains the paths to the running programs to stop (shutdown), the sequence and the delay in seconds before initiating a program stop. 
 
-Just follow normal .json formatting in your file. Remember to use '\\' instead of '\' in the executable file path or as required for your specific OS.
+Just follow normal .json formatting in your file. Remember to use '\\\' instead of '\\' in the executable file path or as required for your specific OS.
 
 ```
 {  
