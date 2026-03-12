@@ -7,7 +7,7 @@ Run the Python script or use the provided executable. Use a text editor like Not
   "startup": [  
     {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},  
     {"path": "C:\\Users\\dfdol\\AppData\\Local\\WSJT-X\\WSJTX-CoPilot.exe", "delay": 2}  
-  ],  
+],  
   "shutdown": [  
     {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},  
     {"path": "C:\\Users\\dfdol\\AppData\\Local\\WSJT-X\\WSJTX-CoPilot.exe", "delay": 2}  
