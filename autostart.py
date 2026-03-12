@@ -38,7 +38,7 @@ class AutoStart:
             delay = item.get('delay', 0)
             
             if callback:
-                callback(f"[{idx}/{len(startup)}] Starting: {Path(path).name}")
+                callback(f"[{idx}/{len(startup)}] Startup: {Path(path).name}")
             
             try:
                 process = subprocess.Popen(path)
@@ -141,9 +141,9 @@ class AutoStartGUI:
         self.root.config(menu=menubar)
         
         file_menu = tk.Menu(menubar, tearoff=0)
-        menubar.add_cascade(label="Edit", menu=file_menu)
-        file_menu.add_command(label="Edit Run/Stop File", command=self.edit_config)
-        file_menu.add_command(label="Reload Run/Stop File", command=self.load_initial_config)
+        menubar.add_cascade(label="Edit App List", menu=file_menu)
+        file_menu.add_command(label="Edit Startup/Shutdown File", command=self.edit_config)
+        file_menu.add_command(label="Reload Startup/Shutdown File", command=self.load_initial_config)
         file_menu.add_separator()
         file_menu.add_command(label="Exit", command=self.root.quit)
         
@@ -168,7 +168,7 @@ class AutoStartGUI:
         # START button
         self.start_button = tk.Button(
             button_frame,
-            text="START",
+            text="STARTUP",
             font=('Arial', 20, 'bold'),
             bg='#00cc00',
             fg='white',
@@ -184,7 +184,7 @@ class AutoStartGUI:
         # STOP button
         self.stop_button = tk.Button(
             button_frame,
-            text="STOP",
+            text="SHUTDOWN",
             font=('Arial', 20, 'bold'),
             bg='#cc0000',
             fg='white',
@@ -198,7 +198,7 @@ class AutoStartGUI:
         self.stop_button.pack(pady=10)
         
         # Log frame
-        log_frame = tk.LabelFrame(self.root, text="Run/Stop Status View", font=('Arial', 10))
+        log_frame = tk.LabelFrame(self.root, text="Startup/Shutdown View", font=('Arial', 10))
         log_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
         
         self.log_text = scrolledtext.ScrolledText(
@@ -239,7 +239,7 @@ class AutoStartGUI:
         success, message = self.autostart.load_config()
         if success:
             self.log("Configuration loaded")
-            self.update_status("Ready", '#00aa00')
+            self.update_status("App List Loaded - OK", '#00aa00')
             
             # Show what's configured
             if self.autostart.config:
@@ -274,8 +274,8 @@ class AutoStartGUI:
         self.is_running = True
         self.start_button.config(state=tk.DISABLED)
         self.stop_button.config(state=tk.DISABLED)
-        self.update_status("Starting applications...", '#0066cc')
-        self.log("\nStarting sequence...")
+        self.update_status("Startup applications...", '#0066cc')
+        self.log("\nStartup sequence...")
         
         def run():
             success, message = self.autostart.start_sequence(callback=self.log)
@@ -292,8 +292,8 @@ class AutoStartGUI:
         self.is_running = True
         self.start_button.config(state=tk.DISABLED)
         self.stop_button.config(state=tk.DISABLED)
-        self.update_status("Stopping applications...", '#cc6600')
-        self.log("\nStopping sequence...")
+        self.update_status("Shutdown applications...", '#cc6600')
+        self.log("\nShutdown sequence...")
         
         def run():
             success, message = self.autostart.stop_sequence(callback=self.log)
