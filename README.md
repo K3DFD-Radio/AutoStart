@@ -3,7 +3,7 @@
 Run the Python script or use the provided executable. Use a text editor like Notepad to edit the autostart.json file to specify which programs to start and, the sequence and the delay in seconds between each app.
 
 ## autostart.json
-{  
+```{  
   "startup": [  
     {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},  
     {"path": "C:\\Users\\dfdol\\AppData\\Local\\WSJT-X\\WSJTX-CoPilot.exe", "delay": 2}  
@@ -12,4 +12,4 @@ Run the Python script or use the provided executable. Use a text editor like Not
     {"path": "C:\\WSJT31\\bin\\wsjtx.exe", "delay": 1},  
     {"path": "C:\\Users\\dfdol\\AppData\\Local\\WSJT-X\\WSJTX-CoPilot.exe", "delay": 2}  
   ]  
-}  
+} ``` 
